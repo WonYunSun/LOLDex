@@ -1,4 +1,4 @@
-import { NextApiRequest } from "next";
+import { NextRequest } from "next/server";
 const apiKey = process.env.RIOT_API_KEY;
 if (!apiKey) {
   throw new Error("RIOT_API_KEY is not defined");
@@ -11,7 +11,7 @@ const headers = new Headers({
   "Accept-Charset": "application/x-www-form-urlencoded; charset=UTF-8",
   Origin: "https://developer.riotgames.com",
 });
-export async function GET(req: NextApiRequest) {
+export async function GET(req: NextRequest) {
   if (req.method === "GET") {
     try {
       const response = await fetch(
