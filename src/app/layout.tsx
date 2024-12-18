@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import TopNav from "./components/TopNav";
 import Providers from "./components/providers/TQProvider";
+import { Suspense } from "react";
+import GlobalLoading from "./GlobalLoading";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,7 +19,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "LoL 정보 앱",
-  description: "League of Legends 정보 앱앱",
+  description: "League of Legends 정보 앱",
 };
 
 export default function RootLayout({
@@ -32,7 +34,11 @@ export default function RootLayout({
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
           <TopNav />
-          <div className="pt-20  w-full max-w-[1000px] mx-auto">{children}</div>
+          <Suspense fallback={<GlobalLoading />}>
+            <div className="pt-20  w-full max-w-[1000px] mx-auto">
+              {children}
+            </div>
+          </Suspense>
         </body>
       </Providers>
     </html>
