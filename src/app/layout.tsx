@@ -21,6 +21,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "LoL 정보 앱",
   description: "League of Legends 정보 앱",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
