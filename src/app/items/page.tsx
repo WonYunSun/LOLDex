@@ -6,7 +6,9 @@ const ItemPage = async () => {
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">아이템 목록</h1>
+      <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+        아이템 목록
+      </h1>
       <div className="grid grid-cols-4 gap-4">
         {items?.map((item) => (
           <div
@@ -21,7 +23,9 @@ const ItemPage = async () => {
               className="mx-auto pt-5"
             />
             <div className="p-4">
-              <h2 className="text-xl font-semibold text-center">{item.name}</h2>
+              <h2 className="text-xl font-semibold text-center text-gray-900 dark:text-white">
+                {item.name}
+              </h2>
               <p className="text-sm text-gray-500 text-center">
                 {item.plaintext}
               </p>

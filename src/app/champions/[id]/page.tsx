@@ -26,7 +26,7 @@ const ChampionDetailwithId = async ({ params }: Props) => {
   }
 
   return (
-    <div className="pb-5 pr-5 pl-5">
+    <div className="p-5 text-gray-900 dark:text-white">
       <div className="text-4xl font-bold mb-4">{champion.name}</div>
       <div className="text-2xl text-gray-600 mb-4">{champion.title}</div>
       <Image
@@ -38,7 +38,7 @@ const ChampionDetailwithId = async ({ params }: Props) => {
       />
       <div className="pt-5">{champion.lore}</div>
       <div className="pt-10  text-2xl font-bold ">스탯</div>
-      <ul className="space-y-2 text-slate-200 pt-5">
+      <ul className="space-y-2 text-slate-200 pt-5 text-gray-900 dark:text-white">
         <li className="flex gap-4 items-center p-2 rounded-md ">
           <span className="font-semibold">공격력:</span>
           <span>{champion.info.attack}</span>

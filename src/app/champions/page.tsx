@@ -10,7 +10,9 @@ const ChampionListPage = async () => {
   const championArray = Object.values(champions);
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">챔피언 목록</h1>
+      <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+        챔피언 목록
+      </h1>
       <ChampionListComponent champions={championArray} />
     </div>
   );

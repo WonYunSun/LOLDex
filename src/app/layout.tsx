@@ -5,6 +5,7 @@ import TopNav from "./components/TopNav";
 import Providers from "./components/providers/TQProvider";
 import { Suspense } from "react";
 import GlobalLoading from "./GlobalLoading";
+import { ThemeProvider } from "next-themes";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,14 +32,16 @@ export default function RootLayout({
     <html lang="en">
       <Providers>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-800`}
         >
-          <TopNav />
-          <Suspense fallback={<GlobalLoading />}>
-            <div className="pt-20  w-full max-w-[1000px] mx-auto">
-              {children}
-            </div>
-          </Suspense>
+          <ThemeProvider attribute="class">
+            <TopNav />
+            <Suspense fallback={<GlobalLoading />}>
+              <div className="pt-20  w-full max-w-[1000px] mx-auto">
+                {children}
+              </div>
+            </Suspense>
+          </ThemeProvider>
         </body>
       </Providers>
     </html>

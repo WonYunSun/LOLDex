@@ -30,7 +30,7 @@ const RotationPage = () => {
   }
   return (
     <div className="p-4">
-      <h1 className="text-2xl font-bold mb-4">
+      <h1 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
         현재 무료로 플레이 가능한 챔피언
       </h1>
       <ChampionListComponent champions={rotation} />

@@ -24,7 +24,7 @@ const ChampionListComponent = ({ champions }: ChampionListComponentProps) => {
               className="mx-auto pt-5"
             />
             <div className="p-4">
-              <h2 className="text-xl font-semibold text-center">
+              <h2 className="text-xl font-semibold text-center text-gray-900 dark:text-white">
                 {champion.name}
               </h2>
               <p className="text-sm text-gray-500 text-center">
