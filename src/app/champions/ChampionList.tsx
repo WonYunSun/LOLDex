@@ -1,11 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import type { ChampionList } from "../types/Champion";
+import type { Champion } from "../types/Champion";
 import Image from "next/image";
 
 interface ChampionListComponentProps {
-  champions: ChampionList | null;
+  champions: Champion[];
 }
 
 const ChampionListComponent = ({ champions }: ChampionListComponentProps) => {
