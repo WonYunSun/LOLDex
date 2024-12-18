@@ -25,7 +25,6 @@ export async function GET(req: NextApiRequest) {
         throw new Error(`Riot API Error: ${response.status}`);
       }
       const data = await response.json();
-      console.log(data.freeChampionIds);
       return new Response(JSON.stringify(data.freeChampionIds), {
         status: 200,
       });

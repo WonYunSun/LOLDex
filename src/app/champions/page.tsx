@@ -9,10 +9,10 @@ const ChampionListPage = async () => {
   const champions = await fetchhampionListData();
 
   return (
-    <>
-      <div className="font-bold text-2xl">챔피언 목록</div>
+    <div className="p-4">
+      <h1 className="text-2xl font-bold mb-4">챔피언 목록</h1>
       <ChampionListComponent champions={champions} />
-    </>
+    </div>
   );
 };
 

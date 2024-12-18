@@ -12,7 +12,7 @@ const ChampionListComponent = ({ champions }: ChampionListComponentProps) => {
   if (!champions) return <p>챔피언 데이터가 없습니다.</p>;
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 pt-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 ">
       {Object.values(champions).map((champion) => (
         <Link key={champion.key} href={`/champions/${champion.id}`}>
           <div className="border-solid border-2 border-red-500/[.33] rounded-lg transform transition-transform hover:scale-105 hover:shadow-[0px_4px_6px_rgba(255,0,0,0.3),0px_-4px_6px_rgba(255,0,0,0.3)] shadow-red-500/[.33]">
