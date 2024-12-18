@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-const apiKey = process.env.RIOT_API_KEY;
+const apiKey = process.env.NEXT_PUBLIC_RIOT_API_KEY;
 if (!apiKey) {
   throw new Error("RIOT_API_KEY is not defined");
 }
